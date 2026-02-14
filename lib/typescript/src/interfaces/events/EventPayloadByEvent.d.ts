@@ -5,12 +5,14 @@ import type { AndroidControllerConnectedEvent, AndroidControllerDisconnectedEven
 import type { PlaybackActiveTrackChangedEvent } from './PlaybackActiveTrackChangedEvent';
 import type { PlaybackBufferEmptyEvent } from './PlaybackBufferEmptyEvent';
 import type { PlaybackBufferFullEvent } from './PlaybackBufferFullEvent';
+import type { PlaybackEndedWithReasonEvent } from './PlaybackEndedWithReasonEvent';
 import type { PlaybackErrorEvent } from './PlaybackErrorEvent';
 import type { PlaybackErrorLogEvent } from './PlaybackErrorLogEvent';
 import type { PlaybackPlayWhenReadyChangedEvent } from './PlaybackPlayWhenReadyChangedEvent';
 import type { PlaybackProgressUpdatedEvent } from './PlaybackProgressUpdatedEvent';
 import type { PlaybackQueueEndedEvent } from './PlaybackQueueEndedEvent';
 import type { PlaybackResumeEvent } from './PlaybackResumeEvent';
+import type { PlaybackSeekCompletedEvent } from './PlaybackSeekCompletedEvent';
 import type { PlaybackStalledEvent } from './PlaybackStalledEvent';
 import type { PlayerErrorEvent } from './PlayerErrorEvent';
 import type { RemoteDuckEvent } from './RemoteDuckEvent';
@@ -51,6 +53,8 @@ export type EventPayloadByEvent = {
     [Event.PlaybackErrorLog]: PlaybackErrorLogEvent;
     [Event.PlaybackBufferEmpty]: PlaybackBufferEmptyEvent;
     [Event.PlaybackBufferFull]: PlaybackBufferFullEvent;
+    [Event.PlaybackSeekCompleted]: PlaybackSeekCompletedEvent;
+    [Event.PlaybackEndedWithReason]: PlaybackEndedWithReasonEvent;
     [Event.MetadataChapterReceived]: AudioMetadataReceivedEvent;
     [Event.MetadataTimedReceived]: AudioMetadataReceivedEvent;
     [Event.MetadataCommonReceived]: AudioCommonMetadataReceivedEvent;
